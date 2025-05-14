@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "349735176920",
+    "project_id": "travel-now-9681a",
+    "storage_bucket": "travel-now-9681a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:349735176920:android:c7f62f93c2d2beec4b25ad",
+        "android_client_info": {
+          "package_name": "com.anonymous.PushNotification"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiHeKfD3Q3Ktp6xecEgKVtzmc5TGlfALE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:349735176920:android:128ddb464b12bebf4b25ad",
+        "android_client_info": {
+          "package_name": "com.sep.travelnow"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiHeKfD3Q3Ktp6xecEgKVtzmc5TGlfALE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

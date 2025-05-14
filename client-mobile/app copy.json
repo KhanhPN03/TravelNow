@@ -1,0 +1,41 @@
+{
+  "expo": {
+    "name": "travel-app",
+    "slug": "travel-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "travelnow",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {         
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.sep.travelnow"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static"
+    },
+    "plugins": [
+      "@react-native-google-signin/google-signin",
+      "expo-router",
+      "expo-font",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share them with your friends."
+        }
+      ]     
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

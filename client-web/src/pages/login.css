@@ -1,0 +1,544 @@
+.loginWrapper p {
+  margin: 0;
+}
+
+.loginWrapper {
+  margin-top: 100px;
+  padding: 0 20px;
+
+}
+
+.loginWrapper h1 {
+  font-size: 28px;
+  padding-top: 15px;
+  padding-bottom: 25px;
+}
+
+.member {
+  width: 152px;
+}
+
+.googleButton {
+  display: flex;
+  background-color: white;
+  width: 280px;
+  height: 50px;
+  padding: 17px 13px;
+  border-radius: 20px;
+  color: #213A58;
+  align-items: center;
+  gap: 18px;
+  border: #DADCE0 1px solid;
+  box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.googleButton i {
+  font-size: 25px;
+}
+
+.googleButton span {
+  font-size: 16px;
+}
+
+.googleButton img {
+  width: auto;
+  height: auto;
+  max-width: 24px;
+  min-height: 24px;
+}
+
+.partition {
+  position: relative;
+  left: 71px;
+  padding: 5px;
+}
+
+.partition::before {
+  content: "";
+  width: 230%;
+  height: 1px;
+  background-color: #858995;
+  position: absolute;
+  inset: 0;
+  left: -230%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.partition::after {
+  content: "";
+  width: 1100%;
+  height: 1px;
+  background-color: #858995;
+  position: absolute;
+  inset: 0;
+  left: 110%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+form[type="login"] {
+  padding: 30px 0;
+}
+.loginPassword {
+  justify-content: space-between;
+}
+.formInput {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 435px;
+  margin-bottom: 25px;
+}
+
+.formInput input {
+  padding: 16px 18px;
+  border-radius: 5px;
+  border: 1px solid #213A58;
+  outline: none;
+  height: 52px;
+}
+
+.dFlex[type="passwordInput"] {
+  justify-content: space-between;
+  align-items: end;
+}
+
+.textUnderline {
+  text-decoration: underline;
+  color: #FF6600;
+}
+
+.input-container {
+  position: relative;
+  width: 100%;
+}
+
+.input-icon {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #213A58;
+  font-size: 20px;
+  z-index: 1;
+}
+
+.input-container input {
+  padding: 16px 45px 16px 18px;
+  border-radius: 5px;
+  border: 1px solid #213A58;
+  outline: none;
+  height: 52px;
+  width: 100%;
+}
+
+.password-toggle {
+  cursor: pointer;
+}
+
+.password-toggle:hover {
+  opacity: 0.8;
+}
+
+.loginButton {
+  border-radius: 16px;
+  background-color: #FF6600;
+  width: 120px;
+  height: 48px;
+  white-space: nowrap;
+  padding: 10px 5px;
+}
+
+.loginButton span {
+  letter-spacing: 2px;
+}
+
+@media (max-width: 920px) {
+  .loginWrapper {
+      justify-content: center;
+      align-items: center;
+      padding: 0 20px;
+      padding-top: 100px;
+      margin-top: 0;
+      width: 100%;
+      max-width: 435px;
+      margin: 0 auto;
+  }
+
+  .formInput {
+      width: 100%;
+  }
+
+  .partition::after {
+      content: "";
+      width: 980%;
+      height: 1px;
+      background-color: #858995;
+      position: absolute;
+      inset: 0;
+      left: 110%;
+      top: 50%;
+      transform: translateY(-50%);
+  }
+}
+
+.sidebarWrapper {
+  width: min(513px, 513px);
+  height: 1024px;
+  position: relative;
+  background-image: url('../../public/images/sidebarBackground.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.sidebarLogoWrapper {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  padding-top: 0px;
+}
+
+.sidebarLogoWrapper img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.sidebarWrapper h1 {
+  font-size: 60px;
+  font-family: ArchivoBlack;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(367px, 400px);
+  line-height: 1.2;
+}
+
+.positionCustom {
+  margin-top: 100px;
+  position: relative;
+  z-index: 1;
+}
+
+.sidebarWrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.50) -4.88%, rgba(255, 255, 255, 0.50) 95.12%);
+}
+
+@media (max-width: 50em) {
+  .sidebarWrapper {
+      display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  span {
+      margin: 0;
+  }
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
+.forgotpassword p {
+  margin: 0;
+}
+
+.forgotWrapper {
+  /* width: 100%; */
+  max-width: 475px;
+  margin-top: 100px;
+  padding: 0 20px;
+}
+
+.forgotWrapper h1 {
+  padding-top: 15px;
+  padding-bottom: 25px;
+}
+
+.googleBtn {
+  display: flex;
+  background-color: var(--clr-orange);
+  width: 256px;
+  padding: 19px 27px;
+  border-radius: 16px;
+  color: #ffffff;
+  align-items: center;
+  gap: 18px;
+}
+
+.googleBtn i {
+  font-size: 25px;
+}
+
+.or {
+  position: relative;
+  left: 71px;
+}
+
+.or::before {
+  content: "";
+  width: 300%;
+  height: 1px;
+  background-color: #858995;
+  position: absolute;
+  inset: 0;
+  left: -310%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.or::after {
+  content: "";
+  width: 1000%;
+  height: 1px;
+  background-color: #858995;
+  position: absolute;
+  inset: 0;
+  left: 110%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+form[type="forgetpassword"] {
+  padding: 30px 0;
+}
+
+.formInputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+.formInputGroup input {
+  max-width: 435px;
+  height: 52px;
+  padding: 16px 18px;
+  border-radius: 5px;
+  border: 1px solid #213a58;
+  outline: none;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.changePasswordButton {
+  border-radius: 16px;
+
+  background-color: #ff6600;
+color: white;
+  width: 176px;
+  height: 48px;
+  white-space: nowrap;
+  padding: 10px 5px;
+}
+
+.EmailAddress {
+  display: flex;
+
+  background-color: #d9d9d9;
+
+  border-radius: 4px;
+  height: 39px;
+  align-items: center;
+  padding-left: 10px;
+}
+
+@media (max-width: 435px) {
+  .forgetstep2EmailPContent {
+      display: none;
+  }
+}
+
+@media (max-width: 920px) {
+  .forgotWrapper {
+      justify-content: center;
+      align-items: center;
+      padding: 0 20px;
+      width: 100%;
+      max-width: 435px;
+      margin: 0 auto;
+      padding-top: 100px;
+  }
+
+}
+
+.forgotWrapperStep2 {
+  /* width: 100%; */
+  margin-top: 100px;
+  padding: 0 20px;
+  width: max(764px, 100%);
+  padding-inline: 16px;
+}
+
+.forgotWrapperStep2 h1 {
+  padding-top: 10px;
+  padding-bottom: 4px;
+}
+
+
+.forgotWrapperStep2 {
+  /* width: 100%; */
+  margin-top: 100px;
+  padding: 0 20px;
+  width: max(764px, 100%);
+  padding-inline: 16px;
+}
+
+.forgotWrapperStep2 h1 {
+  padding-top: 10px;
+  padding-bottom: 4px;
+}
+
+#forgotPasswordGoogleBtn {
+  margin-top: 10px;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.forgettimer {
+  margin-bottom: 20px;
+  color: "#777";
+  padding-left: 5rem;
+}
+
+.resend-button {
+  margin-left: 5px;
+  color: #e9890a;
+  /* Màu mặc định */
+  background: none;
+  border: none;
+  cursor: not-allowed;
+  /* Mặc định là không cho phép nhấp */
+}
+
+.resend-button.enabled {
+  color: #ff6600;
+  /* Màu khi enabled */
+  cursor: pointer;
+  /* Cho phép nhấp khi enabled */
+}
+
+.forgetstep2Input {
+  width: 40px;
+  height: 50px;
+  text-align: center;
+  font-size: 18px;
+  border: 2px solid #1a2b49;
+  border-radius: 5px;
+  outline: none;
+}
+
+.forgotWrapperStep2 {
+  /* width: 100%; */
+  margin-top: 100px;
+  padding: 0 20px;
+  width: max(764px, 100%);
+  padding-inline: 16px;
+}
+
+.forgotWrapperStep2 h1 {
+  padding-top: 10px;
+  padding-bottom: 4px;
+}
+
+#forgotPasswordGoogleBtn {
+  margin-top: 10px;
+  padding: 10px 15px;
+  border-radius: 5px;
+
+}
+
+.forgetstep2Email {
+  margin-inline: auto;
+  background-color: #d9d9d9;
+  width: max(764px, 100%);
+  height: auto;
+  width: fit-content;
+  border-radius: 4px;
+  margin-left: 0;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  /* Căn giữa theo chiều ngang */
+  align-items: center;
+  /* Căn giữa theo chiều dọc */
+  gap: 10px;
+  margin-bottom: 20px;
+  margin-top: 8px;
+  padding-left: 10px;
+  padding: 8px;
+
+  flex-wrap: wrap;
+}
+
+.noWrap {
+  white-space: nowrap;
+}
+
+.forgetstep2Footer {
+  margin-bottom: 1.75rem;
+}
+
+.forgetstep2handle {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 20px;
+
+}
+
+.sidebarLogoWrapper {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  padding-top: 0px;
+}
+
+.sidebarLogoWrapper img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.sidebarWrapper h1 {
+  font-size: 60px;
+  font-family: ArchivoBlack;
+  color: white;
+  position: absolute;
+  top: 50%;   
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(367px,  400px);   
+  line-height: 1.2; 
+}
+.positionCustom {
+  margin-top: 100px;
+  position: relative;
+  z-index: 1;
+}
+.sidebarWrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.50) -4.88%, rgba(255, 255, 255, 0.50) 95.12%);
+}
+@media (max-width: 50em) {
+  .sidebarWrapper {
+      display: none;
+  }
+}

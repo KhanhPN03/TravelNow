@@ -1,0 +1,637 @@
+.refundContainer {
+  margin: 60px auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.refundHeader {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.refundTabs {
+  display: flex;
+  gap: 20px;
+}
+
+.refundTab {
+  position: relative;
+  font-size: 16px;
+  font-family: GT-medium;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.3s ease;
+}
+
+.refundTabActive {
+  color: #007bff;
+  position: relative;
+}
+
+.refundTabActive::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #007bff;
+  animation: slideIn 0.3s ease forwards;
+}
+
+.refundBadge {
+  background-color: #ff6200;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 12px;
+  padding: 2px 6px;
+  line-height: 1;
+  min-width: 18px;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.refundTab:hover .refundBadge {
+  transform: scale(1.1);
+}
+
+.refundContent {
+  padding: 20px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.refundFilterWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 15px;
+  gap: 20px;
+}
+
+.refundSearchContainer {
+  position: relative;
+  flex: 1;
+  max-width: 300px;
+}
+
+.refundSearchIcon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 16px;
+}
+
+.refundSearchInput {
+  width: 100%;
+  padding: 8px 10px 8px 35px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 14px;
+  font-family: GT-regular;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.refundSearchInput:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.refundSortButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  font-size: 14px;
+  font-family: GT-medium;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.refundSortButton:hover {
+  background-color: #e9ecef;
+  border-color: #007bff;
+}
+
+.refundSortIcon {
+  font-size: 16px;
+}
+
+.refundTableWrapper {
+  /* width: 1100px; */
+  animation: fadeIn 0.5s ease forwards;
+  min-height: 288px;
+  display: flex;
+  flex-direction: column;
+  overflow-x: auto; /* Thanh cuộn ngang */
+  scrollbar-width: thin; /* Firefox: Đặt độ rộng thanh cuộn */
+  scrollbar-color: #ccc transparent; /* Firefox: Màu thumb và track */
+}
+
+/* Tùy chỉnh thanh cuộn ngang cho Webkit (Chrome, Safari) */
+.refundTableWrapper::-webkit-scrollbar {
+  height: 6px; /* Độ rộng thanh cuộn ngang */
+}
+
+.refundTableWrapper::-webkit-scrollbar-track {
+  background: transparent; /* Màu nền track */
+}
+
+.refundTableWrapper::-webkit-scrollbar-thumb {
+  background: #ccc; /* Màu thumb */
+  border-radius: 3px; /* Bo góc thumb */
+}
+
+.refundTableWrapper::-webkit-scrollbar-thumb:hover {
+  background: #aaa; /* Màu thumb khi hover */
+}
+
+/* Fix the table layout issues */
+.refundTable {
+  /* width: fit-content; */
+  border-collapse: collapse;
+  /* table-layout: fixed;  */
+}
+
+/* Reset the table display properties */
+.refundTable thead, 
+.refundTable tbody {
+  /* display: table; */
+  width: 100%;
+}
+
+.refundTable tbody {
+  /* max-height: 300px; */
+  overflow-y: auto;
+  width: 100%;
+}
+
+.refundTable tr {
+  /* display: table; */
+  width: 100%;
+  /* table-layout: fixed; */
+}
+.refundTable td:nth-child(1) {
+  width: 130px;
+}
+
+.refundTable th:nth-child(2),
+.refundTable td:nth-child(2) {
+  width: 230px;
+}
+
+.refundTable th:nth-child(3),
+.refundTable td:nth-child(3) {
+  width: 170px;
+}
+
+.refundTable th:nth-child(4),
+.refundTable td:nth-child(4) {
+  width: 200px;
+}
+
+.refundTable th:nth-child(5),
+.refundTable td:nth-child(5) {
+  width: 120px;
+}
+
+.refundTable th:nth-child(6),
+.refundTable td:nth-child(6) {
+  width: 115px;
+}
+.refundTable th:nth-child(7),
+.refundTable td:nth-child(7) {
+  min-width: 200px;
+  text-align: center;
+}
+
+.refundTable th:nth-child(8),
+.refundTable td:nth-child(8) {
+  width: 10%;
+  text-align: center;
+}
+
+.refundTable th:last-child,
+.refundTable td:last-child {
+  width: 150px;
+  text-align: center;
+} */
+
+/* Maintain other styling aspects */
+.refundTable th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+  color: var(--clr-dark-blue);
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.refundTable td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+  /* white-space: inherit; */
+  /* overflow: hidden;
+  text-overflow: ellipsis; */
+}
+
+/* Ensure tbody scrolls properly */
+.refundTableWrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Pop-up styles */
+.refundPopupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Nền mờ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeInOverlay 0.3s ease forwards;
+}
+
+.refundPopup {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  animation: slideInPopup 0.3s ease forwards;
+}
+
+.refundPopupSuccess {
+  max-height: 500px;
+  overflow: auto;
+  scrollbar-width: thin;
+}
+
+.refundPopupHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.refundPopupHeader h3 {
+  margin: 0;
+  font-size: 18px;
+  font-family: GT-medium;
+  color: #333;
+}
+
+.refundPopupCloseButton {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.refundPopupCloseButton:hover {
+  color: #333;
+}
+
+.refundPopupContent {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.refundPopupField {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.refundPopupField[type="proofImage"]{
+  display: block;  
+}
+.refundPopupField[type="proofImage"] .refundImageWrapper {
+  margin-top: 16px;
+}
+.refundPopupField[type="reasonReject"] .refundPopupLabel{
+  min-width: 90px;
+  margin-right: 8px;
+}
+.refundPopupLabel {
+  font-size: 14px;
+  font-family: GT-medium;
+  color: #555;
+  font-weight: 500;
+}
+
+.refundPopupValue {
+  font-size: 14px;
+  font-family: GT-regular;
+  color: #333;
+}
+
+.refundPopupFooter {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.refundPopupButton {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: GT-regular;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.refundPopupButton:not(.refundPopupCancelButton):hover {
+  background-color: #0056b3;
+}
+
+.refundPopupCancelButton {
+  background-color: red;
+}
+.refundPopupCancelButton:hover {
+  background-color: #c82333;
+}
+/* Điều chỉnh độ rộng từng cột */
+.refundTable th,
+.refundTable td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+  font-family: GT-regular;
+}
+
+
+.refundTableCell {
+  color: #555;
+}
+
+.refundTableRow {
+  transition: background-color 0.3s ease;
+}
+
+.refundTableRow:hover {
+  background-color: #f1f3f5;
+}
+
+.refundActionButtons {
+  display: flex;
+  gap: 8px;
+}
+
+.refundActionButton {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: GT-regular;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.refundApproveButton {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.refundApproveButton:hover {
+  background-color: #218838;
+}
+
+.refundRejectButton {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.refundRejectButton:hover {
+  background-color: #c82333;
+}
+
+.refundActionButton:not(.refundApproveButton):not(.refundRejectButton) {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.refundActionButton:not(.refundApproveButton):not(.refundRejectButton):hover {
+  background-color: #0056b3;
+}
+
+.refundProofImage {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.refundNoData {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  text-align: center;
+  animation: fadeIn 0.5s ease forwards;
+  flex-grow: 1;
+}
+
+.refundBellIcon {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+  animation: bellShake 1s ease infinite;
+}
+
+.refundNoData p {
+  font-size: 18px;
+  font-family: GT-Bold;
+  color: var(--clr-dark-blue);
+  margin: 0;
+}
+
+.refundPaginationWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-top: 20px;
+  flex-shrink: 0;
+}
+/* reject */
+.refundModalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeInOverlay 0.3s ease forwards;
+}
+
+.refundModalContent {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  animation: slideInPopup 0.3s ease forwards;
+}
+
+.refundModalContent h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  font-family: GT-medium;
+  color: var(--clr-dark-blue);
+}
+
+.refundModalContent p {
+  font-size: 14px;
+  font-family: GT-regular;
+  color: #555;
+  margin: 0 0 15px 0;
+}
+
+.refundModalReason {
+  margin: 10px 0;
+}
+
+.refundModalReason input[type="radio"] {
+  margin-right: 8px;
+}
+
+.refundModalReason label {
+  font-size: 14px;
+  font-family: GT-regular;
+  color: #333;
+}
+
+.refundModalCustomInput {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: GT-regular;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.refundModalCustomInput:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.refundModalFooter {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.refundModalCancelButton {
+  padding: 8px 16px;
+  margin-right: 10px;
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: GT-regular;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.refundModalCancelButton:hover {
+  background-color: #e9ecef;
+}
+
+.refundModalSubmitButton {
+  padding: 8px 16px;
+  background: #ff4444;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: GT-regular;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.refundModalSubmitButton:hover {
+  background: #cc3333;
+}
+@keyframes slideIn {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bellShake {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+}
