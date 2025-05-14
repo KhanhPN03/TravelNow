@@ -1,0 +1,10 @@
+client-mobile/node_modules/
+client-web/node_modules/
+client-mobile/package-lock.json
+client-web/package-lock.json
+server/node_modules/
+server/package-lock.json
+server/.env
+server/push-notification
+server/upload
+server_AI/venv

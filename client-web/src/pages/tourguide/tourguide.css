@@ -1,0 +1,493 @@
+/* Layout Tổng Thể */
+.containerTourguide {
+  max-width: 1400px;
+  display: flex;
+  justify-content: center;
+  background-color: #ededed;
+  margin-inline: auto;
+  overflow-x: auto;
+}
+
+.tourguideSidebarContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: auto;
+  min-height: 100vh;
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  margin-inline: 10px;
+}
+
+.tourguideSidebarContainer::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 216px;
+  background: #1a2b49;
+}
+
+.attendaceTableContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  width: 100%;
+  max-width: 1100px;
+  margin-top: 50px;
+}
+
+/* Tour Cards */
+.tour-cards-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tour-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.tour-card-header {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 80px minmax(150px, 3fr) repeat(3, minmax(100px, 1fr)) 70px minmax(100px, 1fr);
+  gap: 15px;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.tour-card-field:nth-child(6) {
+  max-width: 70px;
+}
+
+.tour-card-header:hover {
+  background-color: #f8f9fa;
+}
+
+/* Checkbox styling */
+.checkbox-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.checkbox-input {
+  width: 18px;
+  height: 18px;
+  cursor: default;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  position: relative;
+  outline: none;
+}
+
+.checkbox-input:checked {
+  background-color: #226ef0;
+  border-color: #226ef0;
+}
+
+.checkbox-input:checked::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox-input:disabled:not(:checked) {
+  opacity: 1;
+  background-color: #f8f8f8;
+  border-color: #ccc;
+}
+
+.checkbox-disabled {
+  pointer-events: none;
+  opacity: 1;
+}
+
+.checkbox-blue {
+  accent-color: #226ef0 !important;
+  opacity: 1 !important;
+  cursor: default;
+}
+
+.checkbox-input:disabled {
+  opacity: 1;
+  background-color: #226ef0;
+  border-color: #226ef0;
+}
+
+.checkbox-input:checked:disabled {
+  opacity: 1;
+  background-color: #226ef0;
+  border-color: #226ef0;
+}
+
+.checkbox-input:checked:disabled::after {
+  border-color: white;
+}
+
+.checkbox-label {
+  font-size: 14px;
+  color: var(--clr-dark-blue);
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-align: center;
+  font-family: GT-Bold;
+}
+
+.tour-card-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.tour-card-label {
+  font-size: 14px;
+  font-family: GT-Bold;
+  color: var(--clr-dark-blue);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.tour-card-field span:nth-child(2) {
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: Roboto-regular;
+}
+
+.tour-card-field:has(.tour-title) {
+  min-width: 150px;
+}
+
+.tour-title {
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+  font-family: Roboto-regular;
+}
+
+/* Dropdown */
+.tour-card-dropdown {
+  padding: 20px;
+  background: #f8f9fa;
+  border-top: 1px solid #ddd;
+}
+
+.slot-form {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.slot-form h4 {
+  margin: 0 0 15px;
+  font-size: 14px;
+  font-family: GT-Bold;
+  color: var(--clr-dark-blue);
+  text-transform: uppercase;
+}
+
+.slot-form-field {
+  margin-bottom: 15px;
+}
+
+.slot-form-field label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-family: GT-Bold;
+  color: var(--clr-dark-blue);
+  text-transform: uppercase;
+}
+
+.slot-form-field input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: Roboto-regular;
+}
+
+.slot-form-field input.input-error {
+  border-color: #e74c3c;
+  background-color: #fff8f8;
+  font-family: Roboto-regular;
+}
+
+.error-text {
+  color: #e74c3c;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+  font-family: Roboto-regular;
+}
+
+/* Save Button Styling */
+.save-button {
+  padding: 10px 20px;
+  background-color: #cccccc;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: GT-Bold;
+  transition: background-color 0.3s ease;
+}
+
+.save-button-enabled {
+  background-color: #226ef0;
+}
+
+.save-button-enabled:hover {
+  background-color: #0d1a2b;
+}
+
+.save-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Filter and Logout */
+.filter-container {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-family: GT-medium;
+}
+
+.filter-wrapper label {
+  color: #ddd;
+}
+
+.filter-select {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.logout-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: GT-Bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #c0392b;
+}
+
+.logout-button i {
+  font-size: 16px;
+}
+
+.logout-button span {
+  font-size: 14px;
+}
+
+/* Header */
+.tourguideHeader {
+  width: 100%;
+  max-width: 1100px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(53, 52, 52, 0.5);
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 24px;
+  position: relative;
+}
+
+.adminAvatarWrapper {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.adminAvatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Empty State */
+.empty-state-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  color: #666;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.empty-state-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.empty-state-message {
+  font-size: 1rem;
+  line-height: 1.5;
+  max-width: 400px;
+  text-align: center;
+  margin: 0;
+  font-family: GT-medium;
+}
+
+/* Messages */
+.loading-message {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+  font-style: italic;
+}
+
+.error-message {
+  background-color: #fff0f0;
+  color: #d32f2f;
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  border-left: 4px solid #d32f2f;
+}
+
+
+.success-message {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  border-left: 4px solid #2e7d32;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tour-card-header {
+    grid-template-columns: 1fr;
+    padding: 15px;
+  }
+
+  .tour-card-field,
+  .checkbox-container {
+    align-items: flex-start;
+    width: 100%;
+    max-width: 100% !important;
+  }
+
+  .checkbox-container {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .checkbox-label {
+    font-size: 14px;
+    margin-right: 5px;
+  }
+
+  .tour-card-field:has(.tour-title) {
+    max-width: 100%;
+  }
+
+  .tour-title {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    font-size: 16px;
+  }
+
+  .tour-card-field span:nth-child(2) {
+    white-space: normal;
+    overflow-wrap: break-word;
+    overflow: visible;
+    text-overflow: clip;
+    font-size: 14px;
+    text-align: left !important;
+  }
+
+  .slot-form {
+    padding: 10px;
+  }
+
+  .slot-form-field input {
+    font-size: 12px;
+  }
+
+  .save-button {
+    width: 100%;
+  }
+
+  .filter-container {
+    flex-direction: row; /* Keep row layout instead of column */
+    justify-content: space-between; /* Maintain space between filter and logout */
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap; /* Allow wrapping if needed, but keep elements in place */
+  }
+
+  .filter-wrapper {
+    flex: 1; /* Allow filter wrapper to take available space */
+    min-width: 200px; /* Ensure filter wrapper doesn't shrink too much */
+  }
+
+  .logout-button {
+    width: auto; /* Prevent stretching to full width */
+    padding: 8px 16px; /* Maintain original padding */
+    justify-content: center;
+    flex-shrink: 0; /* Prevent button from shrinking */
+  }
+}

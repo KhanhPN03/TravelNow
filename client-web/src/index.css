@@ -1,0 +1,303 @@
+:root {
+  --clr-white: #ffffff;
+  --clr-orange: #ff6600;
+  --clr-yellow: #ffd938;
+  --clr-dark-blue: #1a2b49;
+  --clr-green: #d1f6e2;
+  --clr-greenMedium: #43be83;
+  --clr-blue-100: rgb(0, 113, 235);
+  --clr-blue: #0071eb;
+  --clr-skyblue: #e1f0ff;
+  --clr-grey-100: #dcdfe4;
+  --clr-grey-200: #bababa;
+  --clr-grey-300: #63687a;
+  --clr-grey-400: #4c4c4c;
+
+  --fs-9: 0.563rem;
+  --fs-12: 0.75rem;
+  --fs-14: 0.875rem;
+  --fs-15: 0.938rem;
+  --fs-16: 1rem;
+  --fs-18: 1.125rem;
+  --fs-20: clamp(16px, 1.389vw, 20px);
+  --fs-32: 2rem;
+  --fs-36: clamp(20px, 2.5vw, 2.25rem);
+  --fs-45: 2.813rem;
+  --fs-64: 4rem;
+}
+@font-face {
+  font-family: ArchivoBlack;
+  src: url("../public/fonts/ArchivoBlack-Regular.ttf");
+}
+@font-face {
+  font-family: GT-bold;
+  src: url("../public/fonts/GT-Eesti-Display-Bold-Trial.otf");
+}
+@font-face {
+  font-family: GT-medium;
+  src: url("../public/fonts/GT-Eesti-Display-Medium-Trial.otf");
+}
+@font-face {
+  font-family: GT-regular;
+  src: url("../public/fonts/GT-Eesti-Display-Regular-Trial.otf");
+}
+@font-face {
+  font-family: Roboto-bold;
+  src: url("../public/fonts/Roboto-Bold.ttf");
+}
+@font-face {
+  font-family: Roboto-regular;
+  src: url("../public/fonts/Roboto-Regular.ttf");
+}
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  /* font: inherit; */
+}
+
+*:not(.ql-container *) {
+  font: inherit;
+}
+.Toastify__toast {
+  font-family: GT-medium;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+button {
+  border: none;
+}
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a {
+  text-decoration-skip-ink: auto;
+  text-decoration: none;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+img:not(img[type="svg"]) {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*
+  reusable class
+*/
+.container {
+  width: min(1240px, 100% - 20px);
+  margin-inline: auto;
+}
+.clrWhite {
+  color: var(--clr-white);
+}
+.clrOrange {
+  color: var(--clr-orange);
+}
+.clrGreenMedium {
+  color: var(--clr-greenMedium);
+}
+.clrYellow {
+  color: var(--clr-yellow);
+}
+.clrDarkBlue {
+  color: var(--clr-dark-blue);
+}
+.clrBlue {
+  color: var(--clr-blue);
+}
+.clrGrey-100 {
+  color: var(--clr-grey-100);
+}
+.clrGrey-200 {
+  color: var(--clr-grey-200);
+}
+.clrGrey-300 {
+  color: var(--clr-grey-300);
+}
+.clrGrey-400 {
+  color: var(--clr-grey-400);
+}
+
+/* bg */
+.bgDarkblue {
+  background-color: #1a2b49;
+}
+.bgOrange {
+  background-color: #ff6600;
+}
+.bgRed200 {
+  background-color: #c72a3d;
+}
+.bgRed100 {
+  background-color: #fb3f4a;
+}
+.bgGreen {
+  background-color: #5a9932;
+}
+.bgPrimary {
+  background-color: #226ef0;
+}
+.ffGTBold {
+  font-family: GT-bold;
+}
+.ffGTMedium {
+  font-family: GT-medium;
+}
+.ffGTRegular {
+  font-family: GT-regular;
+}
+.ffRobotoRegular {
+  font-family: Roboto-regular;
+}
+.ffRobotoBold {
+  font-family: Roboto-bold;
+}
+.fs-9 {
+  font-size: var(--fs-9);
+}
+.fs-12 {
+  font-size: var(--fs-12);
+}
+.fs-14 {
+  font-size: var(--fs-14);
+}
+.fs-15 {
+  font-size: var(--fs-15);
+}
+.fs-16 {
+  font-size: var(--fs-16);
+}
+.fs-18 {
+  font-size: var(--fs-18);
+}
+.fs-20 {
+  font-size: var(--fs-20);
+}
+.fs-32 {
+  font-size: var(--fs-32);
+}
+.fs-36 {
+  font-size: var(--fs-36);
+}
+.fs-45 {
+  font-size: var(--fs-45);
+}
+.fs-64 {
+  font-size: var(--fs-64);
+}
+.dGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.dFlex {
+  display: flex;
+  align-items: center;
+}
+.dFlexSpaceBetween {
+  display: flex;
+  justify-content: space-between;
+}
+.flexWrap {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+  align-items: center;
+  /* gap: 10px; */
+}
+input::placeholder {
+  font-family: GT-medium;
+  color: #1c1c1c7d;
+}
+.pointer-none {
+  pointer-events: none;
+}
+.dNone {
+  display: none;
+}
+.maxWidth {
+  max-width: 1440px;
+  margin-inline: auto;
+}
+#Status-at {
+  margin-top: 35px;
+  font-family: GT-regular;
+  color: #1a2b49;
+  font-size: 1rem;
+}
+.paddingHorizontalDynamic {
+  padding: clamp(46px, 6.528vw, 94px) 0;
+}
+/* Custom see more button for global use */
+.seeMoreBtn {
+  --btn-padding-x: 1.375rem;
+  --btn-padding-y: 0.5rem;
+  --btn-radius: 1.5rem;
+  --btn-background-clr: var(--clr-white);
+  --btn-border-clr: var(--clr-light-blue);
+  --btn-ff: var(--ff-GT-bold);
+  --btn-fs: 1rem;
+  --btn-clr: var(--clr-light-blue);
+
+  font-family: var(--btn-ff);
+  font-size: var(--btn-fs);
+  color: var(--btn-clr);
+
+  background-color: var(--btn-background-clr-clr);
+
+  padding: var(--btn-padding-y) var(--btn-padding-x) var(--btn-padding-y)
+    var(--btn-padding-x);
+
+  border: 2px solid var(--btn-border-clr);
+
+  border-radius: var(--btn-radius);
+}
