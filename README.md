@@ -106,7 +106,7 @@ cd TravelNow
    ```bash
    python a.py
    ```
-   The AI server will run at [http://localhost:9999](http://localhost:5001).
+   The AI server will run at [http://localhost:9999].
 
 ---
 
@@ -129,4 +129,4 @@ cd TravelNow
 
 ## Contact
 
-For any questions or support, please contact us at travelnow.co@gmail.com
+For any questions or support, please contact us at khanhpn31@gmail.com
